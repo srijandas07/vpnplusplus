@@ -1,0 +1,58 @@
+base_lr: 0.1
+batch_size: 16
+config: /data/stars/user/sdas/PhD_work/poses_attention/PARS/config/smarthome-cross-subject/train_joint_new_cont.yaml
+device:
+- 0
+- 1
+- 2
+eval_interval: 5
+feeder: feeders.feeder.Feeder
+ignore_weights: []
+log_interval: 100
+model: model.agcn.Model
+model_args:
+  graph: graph.smarthome.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 31
+  num_person: 1
+  num_point: 15
+model_saved_name: ./runs/smarthome_cs_agcn_joint
+nesterov: true
+num_epoch: 60
+num_worker: 32
+only_train_epoch: 0
+only_train_part: false
+optimizer: SGD
+phase: train
+print_log: true
+save_interval: 2
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 30
+- 40
+test_batch_size: 32
+test_feeder_args:
+  data_path: /home/dyang/di/2s-AGCN-For-Daily-Living/data/smarthome/xsub/val_data_joint.npy
+  label_path: /home/dyang/di/2s-AGCN-For-Daily-Living/data/smarthome/xsub/val_label.pkl
+  normalization: false
+  random_choose: 4000
+  window_size: 400
+train_feeder_args:
+  data_path: /home/dyang/di/2s-AGCN-For-Daily-Living/data/smarthome/xsub/train_data_joint.npy
+  debug: false
+  label_path: /home/dyang/di/2s-AGCN-For-Daily-Living/data/smarthome/xsub/train_label.pkl
+  normalization: false
+  random_choose: 4000
+  random_move: false
+  random_shift: false
+  window_size: 400
+warm_up_epoch: 0
+weight_decay: 0.0001
+weights: null
+work_dir: ./work_dir/smarthome/xsub/agcn_joint

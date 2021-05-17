@@ -1,0 +1,6 @@
+[ Mon Mar  1 18:43:08 2021 ] using warm up, epoch: 0
+[ Mon Mar  1 19:17:59 2021 ] using warm up, epoch: 0
+[ Mon Mar  1 19:56:52 2021 ] using warm up, epoch: 0
+[ Mon Mar  1 20:46:18 2021 ] using warm up, epoch: 0
+[ Tue Mar  2 05:26:13 2021 ] using warm up, epoch: 0
+[ Tue Mar  2 15:24:28 2021 ] using warm up, epoch: 0
